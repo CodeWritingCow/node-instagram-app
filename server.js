@@ -1,5 +1,8 @@
 //	GRAB THE PACKAGES/VARIABLES WE NEED
 //	=============================================	
+// load environmental variables. dotenv works in development environment only!
+require('dotenv').config();
+
 var express = require('express'),
 	app = express(),
 	ig = require('instagram-node').instagram();

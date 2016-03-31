@@ -13,5 +13,8 @@
     "ejs": "^2.4.1",
     "express": "^4.13.4",
     "instagram-node": "^0.5.8"
+  },
+  "devDependencies": {
+    "dotenv": "^2.0.0"
   }
 }
