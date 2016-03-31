@@ -1,7 +1,7 @@
 {
   "name": "node-instagram-app",
   "version": "1.0.0",
-  "description": "Instagram Node.js app",
+  "description": "Node.js app for viewing popular Instagram pictures",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
