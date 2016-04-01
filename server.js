@@ -58,6 +58,24 @@ app.get('/sushi', function (req, res) {
 	});
 });
 
+// user:pangofhunger route - latest images from pangofhunger (AKA Gary Pang, CodeWritingCow!)
+app.get('/pangofhunger', function(req, res) {
+	
+	ig.use({ access_token: process.env.ACCESS_TOKEN });
+	ig.user_media_recent(process.env.PANGOFHUNGER_ID, function(err, medias, pagination, remaining, limit) {
+		res.render('pages/index', { grams: medias });
+	});
+});
+
+// user:pressenterpa route - latest images from pressenterpa
+app.get('/pressenterpa', function(req, res) {
+	
+	ig.use({ access_token: process.env.ACCESS_TOKEN });
+		ig.user_media_recent(process.env.PRESSENTERPA_ID, function(err, medias, pagination, remaining, limit) {
+		res.render('pages/index', {grams: medias });
+	});
+});
+
 //	START THE SERVER
 //	=============================================
 app.listen(8080);
