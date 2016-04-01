@@ -40,6 +40,23 @@ app.get('/', function(req, res) {
 	});
 });
 
+//	ramen page route - latest ramen images
+app.get('/ramen', function (req, res) {
+
+	ig.use({ access_token: process.env.ACCESS_TOKEN });
+	ig.tag_media_recent('ramen', function(err, medias, pagination, remaining, limit) {
+		res.render('pages/index', { grams: medias });
+	});
+});
+
+// sushi page route - latest sushi images
+app.get('/sushi', function (req, res) {
+
+	ig.use({ access_token: process.env.ACCESS_TOKEN });
+	ig.tag_media_recent('sushi', function(err, medias, pagination, remaining, limit) {
+		res.render('pages/index', { grams: medias });
+	});
+});
 
 //	START THE SERVER
 //	=============================================
