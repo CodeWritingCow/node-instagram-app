@@ -39,3 +39,10 @@ footer {
 .instagram-bar .comments{
 	float: right;
 }
+
+.instagram-bar .likes, .comments {
+	background: #3c8ce5;
+	background: rgba(60, 140, 229, .8);
+	padding: 8px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
