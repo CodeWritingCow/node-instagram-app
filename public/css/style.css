@@ -3,8 +3,15 @@ body {
 	background: #eeeeee;
 }
 
-header a:hover {
-	background: #aaa;
+header .glyphicon {
+	/* TODO: fix <a class="navbar-brand"> and first <ul class="nav navbar-nav"><li> in header.ejs.
+		In smaller viewports, they end up on the same line. 
+		When user hovers on <li>, the changing background color hides the navbar-brand. */
+	padding-left: 10px;
+}
+
+header .navbar-nav {
+	margin-right: 10px;
 }
 
 footer {
