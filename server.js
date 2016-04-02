@@ -58,6 +58,15 @@ app.get('/sushi', function (req, res) {
 	});
 });
 
+// Bloomsburg Fair page route - bloomsburg fair images
+app.get('/bloomsburg-fair', function(req, res) {
+	
+	ig.use({ access_token: process.env.ACCESS_TOKEN });
+	ig.tag_media_recent('bloomsburgfair', function(err, medias, pagination, remaining, limit) {
+		res.render('pages/index', { grams: medias });
+	});
+});
+
 // user:pangofhunger route - latest images from pangofhunger (AKA Gary Pang, CodeWritingCow!)
 app.get('/pangofhunger', function(req, res) {
 	
@@ -71,7 +80,7 @@ app.get('/pangofhunger', function(req, res) {
 app.get('/pressenterpa', function(req, res) {
 	
 	ig.use({ access_token: process.env.ACCESS_TOKEN });
-		ig.user_media_recent(process.env.PRESSENTERPA_ID, function(err, medias, pagination, remaining, limit) {
+		ig.user_media_recent(process.env.PRESSENTERPA_ID, {count: 10}, function(err, medias, pagination, remaining, limit) {
 		res.render('pages/index', {grams: medias });
 	});
 });
