@@ -67,6 +67,15 @@ app.get('/bloomsburg-fair', function(req, res) {
 	});
 });
 
+// Lithuania page route - Lithuania images
+app.get('/lithuania', function(req, res) {
+	
+	ig.use({ access_token: process.env.ACCESS_TOKEN });
+	ig.tag_media_recent('lithuania', function(err, medias, pagination, remaining, limit) {
+		res.render('pages/index', { grams: medias });
+	});
+});
+
 // user:pangofhunger route - latest images from pangofhunger (AKA Gary Pang, CodeWritingCow!)
 app.get('/pangofhunger', function(req, res) {
 	
