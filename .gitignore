@@ -20,6 +20,12 @@ $RECYCLE.BIN/
 # Environmental variables
 .env
 
+# Dependency directories
+node_modules
+
+# Distribution directories
+public/dist
+
 # =========================
 # Operating System Files
 # =========================
