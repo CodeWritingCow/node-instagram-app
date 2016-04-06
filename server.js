@@ -76,6 +76,15 @@ app.get('/lithuania', function(req, res) {
 	});
 });
 
+// Cats page route - cats images
+app.get('/cats', function(req, res) {
+	
+	ig.use({ access_token: process.env.ACCESS_TOKEN });
+	ig.tag_media_recent('cats', function(err, medias, pagination, remaining, limit) {
+		res.render('pages/index', { grams: medias });
+	});
+});
+
 // user:pangofhunger route - latest images from pangofhunger (AKA Gary Pang, CodeWritingCow!)
 app.get('/pangofhunger', function(req, res) {
 	
