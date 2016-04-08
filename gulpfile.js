@@ -9,7 +9,9 @@ gulp.task('minify-css', function() {
 	return gulp.src('public/css/*.css')
 			   .pipe(cleanCSS())
 			   .pipe(rename({ suffix: '.min' }))
-			   .pipe(gulp.dest('public/dist/css'));
+			   .pipe(gulp.dest('dist/public/css'));
 });
 
 // TODO: task for minifying JavaScript
+
+// TODO: task for minifying *.ejs
