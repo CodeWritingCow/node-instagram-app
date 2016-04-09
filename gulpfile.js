@@ -39,5 +39,8 @@ gulp.task('min-ejs-partials', function() {
 // task for running min-ejs-pages and min-ejs-partials
 gulp.task('min-ejs', ['min-ejs-pages', 'min-ejs-partials']);
 
-// TODO: task for building app for deployment
-// exports required files to dist folder
+// task for building app for deployment
+gulp.task('build', ['min-css', 'min-js', 'min-ejs'], function() {
+	return gulp.src(['package.json', 'Procfile'])
+			   .pipe(gulp.dest('./dist'));
+});
