@@ -24,7 +24,7 @@ $RECYCLE.BIN/
 node_modules
 
 # Distribution directories
-dist
+# dist
 
 # =========================
 # Operating System Files
