@@ -1,0 +1,25 @@
+{
+  "name": "node-instagram-app",
+  "version": "1.0.0",
+  "description": "Node.js app for viewing popular Instagram pictures",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Gary Pang",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "instagram-node": "^0.5.8"
+  },
+  "devDependencies": {
+    "dotenv": "^2.0.0",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.4",
+    "gulp-ejsmin": "0.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.3"
+  }
+}
